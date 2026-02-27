@@ -11,7 +11,7 @@ class Kaalin < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/dontbeidle/kaalin-cli/releases/download/v0.1.0/kaalin-cli_0.1.0_darwin_amd64.tar.gz"
-      sha256 "d7f353101ab0279acff47b8ee9d0c332902dd52ee150ee55b6c695ad21996396"
+      sha256 "aeeec9ddf92d44867aa5d514f94d8237262481a6b443a0b5677004f036084efb"
 
       define_method(:install) do
         bin.install "kaalin"
@@ -20,7 +20,7 @@ class Kaalin < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/dontbeidle/kaalin-cli/releases/download/v0.1.0/kaalin-cli_0.1.0_darwin_arm64.tar.gz"
-      sha256 "415ce289ed03ddecb0586826a34ff72dd330d052ddae6deadfa181e28da8855c"
+      sha256 "1948a9b97d1c25f4d7d6ee5c4545da5a612c9d162c1b4822b7a824191eb03651"
 
       define_method(:install) do
         bin.install "kaalin"
@@ -32,7 +32,7 @@ class Kaalin < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/dontbeidle/kaalin-cli/releases/download/v0.1.0/kaalin-cli_0.1.0_linux_amd64.tar.gz"
-      sha256 "02a70f66ac344d8cb84930bd26fe35385dcfca7c45a52ffa8e01ce85b7cd5f57"
+      sha256 "1e5faa3aabbdbb6f0d77f64b16b1ba82fd0dd7effa791d807c652b917371ca90"
       define_method(:install) do
         bin.install "kaalin"
         generate_completions_from_executable(bin/"kaalin", "completion")
@@ -40,7 +40,7 @@ class Kaalin < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/dontbeidle/kaalin-cli/releases/download/v0.1.0/kaalin-cli_0.1.0_linux_arm64.tar.gz"
-      sha256 "37b9ef43e0c1d7fc3ce484d3f80699633a2be25b3763a2f68ce28f65c72e9a4b"
+      sha256 "7311f555413d02ad6d7dfc64665bbe95565dc784a2ce4badff6fe0cce2792c4a"
       define_method(:install) do
         bin.install "kaalin"
         generate_completions_from_executable(bin/"kaalin", "completion")
